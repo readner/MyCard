@@ -34,7 +34,7 @@
                 </nav>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner"> <!--背景图片-->
         <div class="mask"></div>
     </div>
     <main >      <!--简历主要内容-->
@@ -83,37 +83,103 @@
         <p class="downloadResume-wapper">
         <a class="downloadResume" href="./web前端.pdf" target="_blank;" download>下载 PDF 简历</a>
         </p>
-        <p class="selfInterduction">
+        <p class="selfInterduction"> <!--自我介绍-->
             本人性格开朗、稳重、有活力,待人热情、真诚。<br>
             工作认真负责,积极主动,能吃苦耐劳。 <br>
             有较强的组织能力、实际动手能力和团体协作精神,能迅速...
         </p>
     </main>
-    <section>
+    <section class="skills">
         <h2>技能</h2>
-        <ol>
-            <li>HTML 5 &amp; CSS 3</li>
-            <li>JavaScript</li>
-            <li>JQuery</li>
-            <li>Vue</li>
-            <li>React</li>
-            <li>Http</li>
+        <ol class="clearfix">
+            <li>
+                <div>
+                <h3>
+                    HTML 5 &amp; CSS 3
+                </h3>   
+                    <div class="progressBar">
+                    <div class="progress"style="width: 16%;"></div>    
+                    </div>  
+                </div>      
+            </li>
+            <li>
+                <h3>
+                    JavaScript
+                </h3>   
+                <div class="progressBar">
+                <div class="progress"style="width: 33%;"></div>    
+                </div>        
+            </li>
+            <li>
+                <h3>
+                    JQuery
+                </h3>   
+                <div class="progressBar">
+                <div class="progress" style="width: 39%;"></div>    
+                </div>        
+            </li>
+            <li>
+                <h3>
+                  Vue.js
+                </h3>   
+                <div class="progressBar">
+                <div class="progress"style="width: 42%;"></div>    
+                </div>        
+            </li>
+            <li>
+                <h3>
+                   React.js
+                </h3>   
+                <div class="progressBar">
+                <div class="progress"style="width: 34%;"></div>    
+                </div>        
+            </li>
+            <li>
+                <h3>
+                  Node.js
+                </h3>   
+                <div class="progressBar">
+                <div class="progress"style="width: 28%;"></div>    
+                </div>        
+            </li>
         </ol>
     </section>
-    <section>
-        <h2>作品集</h2>
-        <nav>
-            <ol>
-                <li>所有</li>
-                <li>框架</li>
-                <li>原生JS &amp;CSS</li>
+    <section class="portfolio">
+        <h2>作品集</h2>  <!--作品展示-->
+        <nav class="text-nav">   <!--文字内容-->
+            <ol class="clearfix">
+                <li id="portfolio1">所有</li>
+                <li id="portfolio2">框架</li>
+                <li id="portfolio3">原生JS &amp;CSS</li>
             </ol>
+            <div id="portfolioBar" class="bar state-1">
+                <div class="bar-inner"></div>
+            </div>
         </nav>
-        <nav>
+        <script>
+            portfolio1.onclick = function(){
+            portfolioBar.className = 'bar state-1'
+            }
+            portfolio2.onclick = function(){
+            portfolioBar.className = 'bar state-2'
+            }
+            portfolio3.onclick = function(){
+            portfolioBar.className = 'bar state-3'
+            }
+        </script>
+
+
+        <nav class="img-nav"> <!--图片内容-->
             <div class="jobs">
-                <div class="big"></div>
-                <div class="small"></div>
-                <div class="small"></div>
+                <div class="big">
+                    <img src="./img/2-1.jpg" alt="作品1">
+                </div>
+                <div class="small">
+                    <img src="./" alt="作品2">
+                </div>
+                <div class="small">
+                    <img src="./" alt="作品3">
+                </div>
             </div>
         </nav>
     </section>
